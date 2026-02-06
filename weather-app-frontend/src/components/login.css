@@ -1,0 +1,99 @@
+/* Full-page layout */
+.login-page {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5; /* background matches login form */
+    padding: 50px 20px;
+    gap: 30px; /* space between form and images */
+    box-sizing: border-box;
+  }
+  
+  /* Login form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 350px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .login-form input {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .login-form input:focus {
+    border-color: #007bff;
+  }
+  
+  .login-form button {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-form p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .login-form p button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    font-size: 14px;
+  }
+  
+  /* Image container */
+  .login-images {
+    flex-shrink: 0;
+    width: 400px;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  
+  .login-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 10s ease-in-out;
+    border-radius: 12px;
+  }
+  
+  .login-images img.active {
+    opacity: 1;
+    transform: scale(1.05); /* subtle zoom */
+  }
+  

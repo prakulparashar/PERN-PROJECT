@@ -1,0 +1,102 @@
+.upload-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6;
+  flex-direction: column;        
+  margin-top: 80px;              
+}
+
+
+.upload-card {
+  width: 100%;
+  max-width: 550px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.upload-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #1f2937;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upload-form input,
+.upload-form select {
+  padding: 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.upload-form input:focus,
+.upload-form select:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.upload-form button {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.15s;
+}
+
+.upload-form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* 💰 Payment Section Styling */
+.payment-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: #111827;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.upload-form input[name="upi_id"],
+.upload-form input[name="bank_account"],
+.upload-form input[name="ifsc"] {
+  background-color: #fefefe;
+}
+
+/* ✨ Smooth entry */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

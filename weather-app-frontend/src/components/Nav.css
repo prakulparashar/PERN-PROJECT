@@ -1,0 +1,85 @@
+nav {
+  display: flex;
+  border-bottom: 2px solid #f3f3f3;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px; /* Reduced padding slightly for a tighter look */
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box; /* Ensures padding doesn't push width past 100% */
+}
+
+/* --- PROFILE PICTURE STYLES --- */
+.nav-left-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 50px;
+}
+
+.nav-pfp {
+  width: 45px;         /* Fixed small size */
+  height: 45px;        /* Fixed small size */
+  border-radius: 50%;  /* Makes it a circle */
+  object-fit: cover;   /* Prevents stretching/distortion */
+  border: 2px solid #f0f0f0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-pfp:hover {
+  transform: scale(1.05);
+  border-color: #e0e0e0;
+}
+
+.nav-pfp-icon {
+  width: 35px;
+  height: 35px;
+  color: #333;
+}
+
+/* --- SEARCH INPUT --- */
+.nav-contianer {
+  display: flex;
+  align-items: center;
+}
+
+input.search-input {
+  padding: 12px 20px;
+  border: none;
+  background: #f7f6f6;
+  outline: none;
+  border-radius: 5px;
+  width: 14rem;
+}
+
+/* --- ICONS & LINKS --- */
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 2rem;
+  color: black;
+  transition: color 0.2s;
+}
+
+.nav-icons:hover {
+  color: #555;
+}
+
+.nav-logout-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
