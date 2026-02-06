@@ -8,7 +8,7 @@ const authRoutes = require('./routes/auth');
 
 // 1. CORS
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "http://localhost:3000",          //later ->origin: process.env.CLIENT_URL
   methods: ["GET","POST","PUT","DELETE"],
   credentials: true
 }));
