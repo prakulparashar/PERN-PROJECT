@@ -107,10 +107,10 @@ router.post("/login", async (req, res) => {
     if (!validPass) return res.status(400).json({ msg: "wrong password" });
 
     // generate tokens
-    const accessToken = jwt.sign(
-      { id: result.rows[0].id, role: userType },
-      process.env.JWT_SECRET,
-      { expiresIn: "30m" }
+    const accessToken = jwt.sign(                //signing/birth of a JWT
+      { id: result.rows[0].id, role: userType }, //user info stored in the payload
+      process.env.JWT_SECRET,                    //signature is created using this secret key, this secret key hashes the header and the payload 
+      { expiresIn: "30m" }                       //expiry time
     );
 
     const refreshToken = jwt.sign(
