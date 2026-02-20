@@ -91,4 +91,4 @@ module.exports = authenticateToken;
 // In a real interview, they might ask: *"Where does `process.env.JWT_SECRET` come from?"*
 // **Answer:** It's an environment variable stored on the server. It should **never** be checked into Git/Github, and it must be the **same** across all servers in your cluster so they can all verify the same tokens.
 
-// **Would you like me to show you the `/login` code that actually *creates* this token in the first place?**.
+// **Would you like me to show you the `/login` code that actually *creates* this token in the first place?**
