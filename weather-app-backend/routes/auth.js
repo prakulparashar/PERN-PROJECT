@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 const authenticateToken = require("../jwt.js");
-
+const tokenBucketRateLimit = require("../TokenBucket.js");
 const { OAuth2Client } = require("google-auth-library");
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
@@ -83,7 +83,13 @@ router.post("/register", async (req, res) => {
 });
 
 // LOGIN
-router.post("/login", async (req, res) => {
+router.post("/login",  tokenBucketRateLimit({ 
+  capacity: 5, 
+  refillRate: 1 / 60, 
+  keyPrefix: 'rate_limit:login:' 
+}),
+
+ async (req, res) => {
   console.log("Login request body:", req.body);
   try {
     const { username, password } = req.body;
@@ -448,9 +454,6 @@ router.post("/google", async (req, res) => {
   }
   
 });
-
-
-
 
 
 
